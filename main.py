@@ -46,7 +46,8 @@ while running:
         # Change the X and Y by their velocities.
         headX += headX_change
         headY += headY_change
-       
+        
+        #Boundaries.
         if headX > 770:
             headX = 765
         if headX <= 0:
