@@ -10,7 +10,8 @@ clock = pygame.time.Clock()
 # Colors
 BLACK = (0,0,0)
 WHITE = (255,255,255)
-CREAM = (239, 235, 216)
+CREAM = (239,235,216)
+RED = (255,0,0) # Make the apple red.
 
 headImg = pygame.image.load('head.png').convert()
 def head(x,y):
