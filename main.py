@@ -1,5 +1,7 @@
 import pygame, time, os, sys, random, math
 
+# Welcome to my snake game! - Omar
+
 pygame.init()
 screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption("Snake")
@@ -29,7 +31,7 @@ head_direction = "Right"
 score = 0
 font = pygame.font.Font('freesansbold.ttf', 36)
 
-def disp_score():
+def disp_score(): 
     score_text = font.render(f'Score: {score}', True, (82,163,99))
     screen.blit(score_text, (345, 10))
 
@@ -51,15 +53,30 @@ appleX = random.randint(0,750)
 appleY = random.randint(350,550)
 
 
-def collision():
+def collision(): # Boolean
     global headX
     global headY
     global appleX
     global appleY
     distance = math.sqrt((math.pow(appleX-headX,2)) + (math.pow(appleY-headY,2)))
     if distance < 15:
+        # Do something to add a tail part.
         return True
     return False
+
+tailImg = []
+tailX = []
+tailY = []
+numOfTails = 0
+
+def tail_thing():
+    for i in range(numOfTails):
+        tailImg.append(headImg)
+        #if direction == up
+#        tailX.append(past tailY - 10)
+        #iff direction == down
+         #   tailX.append(past tailY + 10)
+        #now do the same for the Y, etc
 
 col_sound = pygame.mixer.Sound("apple.wav")
 running = True
