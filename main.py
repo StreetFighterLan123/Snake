@@ -72,6 +72,8 @@ numOfTails = 0
 def tail_thing():
     for i in range(numOfTails):
         tailImg.append(headImg)
+        
+# Put this stuff in another function.
         #if direction == up
 #        tailX.append(past tailY - 10)
         #iff direction == down
